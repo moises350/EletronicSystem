@@ -13,15 +13,19 @@ Projeto com duas api's:
 
 Para que os projetos rodem corretamente, é preciso que cada um rode em uma porta diferente, que já está configurado o eletronic-withdrawal-system para a porta 8080 e o bank-api para a porta 8090
 
-O banco de dados da aplicação que foi MySQL, segue as querys para o Start do projeto:
+<b>Primeiro passo:</b> Abra os dois projetos separados como Maven Project dentro do Eclipse.</br>
+<b>Segundo passo:</b> Clique com o botão direito na classe dos dois projetos, Run as ... -> Java Application (Faça isso para os dois projetos)</br>
 
+<b>Terceiro passo:</b>
+O banco de dados da aplicação que foi MySQL, você deve executar em seu banco de dados local,segue as querys para o Start do projeto:</br>
+<code>
 CREATE DATABASE ELETRONIC_SYSTEM;
+</code></br>
+Após subir a primeira vez, o hibernate irá automaticamente criar as tabelas, depois desse procedimento, insira os seguintes dados:<br>
 
-após subir a primeira vez, o hibernate irá automaticamente criar as tabelas, depois desse procedimento, insira os seguintes dados:
+      insert into terminal values(1,"Terminal Rua Augusta", 1);
+      insert into drawer_terminal values(1,1,10,0);
+      insert into drawer_terminal values(2,1,20,0);
+      insert into drawer_terminal values(3,1,50,0);
+      insert into drawer_terminal values(4,1,100,0);
 
-insert into terminal values(1,"Terminal Rua Augusta", 1);
-
-insert into drawer_terminal values(1,1,10,0);</br>
-insert into drawer_terminal values(2,1,20,0);</br>
-insert into drawer_terminal values(3,1,50,0);</br>
-insert into drawer_terminal values(4,1,100,0);</br>
