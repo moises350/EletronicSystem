@@ -1,6 +1,8 @@
 # EletronicSystem - Caixa Eletrônico
 
-Projeto com duas api's: 
+-- Projeto Desenvolvido com Java 8</br>
+
+<b>Projeto com duas api's:</b> 
 
   módulo - <b>eletronic-withdrawal-system</b></br>
   É o saque bancário, no qual você manda um Http PUT no seguinte endpoint para saque:
@@ -29,3 +31,17 @@ Após subir a primeira vez, o hibernate irá automaticamente criar as tabelas, d
       insert into drawer_terminal values(3,1,50,0);
       insert into drawer_terminal values(4,1,100,0);
 
+# Testando a api no POSTMAN
+
+Exemplo do postman, aonde o valor "30" é a quantia do saque, a api retorna a quantidade de notas de cada cédula.
+![alt text](imgs/withdraw.PNG)
+
+Para você gerar seu token de autenticação, mande POST para a seguinte endpoint conforme a imagem:
+![alt text](imgs/request_token.PNG)
+
+Seu token, caso autenticado, estará na aba Headers em Authorization, guarde ele, pois será seu token de uso do bank-api
+![alt text](imgs/token.PNG)
+
+Para testar a bank API, no campo key você escreve "Authorization" e no value você insere o token fornecido pra você no login.
+Nesse endpoint , você passará o tipo de nota que voce quer abastecer e a quantia de notas -> http:localhost:8090/bank/supply/TIPODENOTA/QUANTIDADEDENOTAS, vale lembrar que estão disponiveis somente notas de 100,50,20 e 10
+![alt text](imgs/test-bank-api.PNG)
