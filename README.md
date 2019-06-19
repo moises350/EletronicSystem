@@ -45,3 +45,5 @@ Seu token, caso autenticado, estará na aba Headers em Authorization, guarde ele
 Para testar a bank API, no campo key você escreve "Authorization" e no value você insere o token fornecido pra você no login.
 Nesse endpoint , você passará o tipo de nota que voce quer abastecer e a quantia de notas -> http:localhost:8090/bank/supply/TIPODENOTA/QUANTIDADEDENOTAS, vale lembrar que estão disponiveis somente notas de 100,50,20 e 10
 ![alt text](imgs/test-bank-api.PNG)
+
+Irá te retornar OK caso tenha sido abastecido o caixa eletrônico.
